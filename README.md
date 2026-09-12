@@ -1,8 +1,8 @@
-# 🅿️ UTEQ Smart Parking — Sistema de Gestión de Vehículos
+﻿# 🅿️ UTEQ Smart Parking — Sistema de Gestión de Vehículos
 
 <div align="center">
 
-### Plataforma integral para la administración de vehículos y propietarios autorizados
+### Plataforma administrativa para el control de vehículos autorizados y propietarios
 
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=flat&logo=react)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-Latest-646CFF?style=flat&logo=vite)](https://vitejs.dev/)
@@ -14,85 +14,99 @@
 
 ---
 
-## 🖼️ Capturas de Pantalla
+## 🖼️ Vista General
 
-La experiencia principal del sistema es el monitoreo de entrada: permite capturar o subir una fotografía del vehículo, enviarla al servicio OCR y consultar si la placa está registrada.
+UTEQ Smart Parking es una solución web moderna para gestionar los vehículos y propietarios habilitados dentro de la Universidad Técnica Estatal de Quevedo. La aplicación combina un panel administrativo intuitivo, un módulo de monitoreo de entrada y una capa de seguridad basada en Supabase para ofrecer una experiencia eficiente y confiable.
 
-### 🎥 Monitoreo de Entrada con OCR
+### Flujo principal de acceso
+
+La funcionalidad más destacada del sistema es el monitoreo de entrada: permite tomar una foto del vehículo desde la cámara o cargar una imagen, enviar ese archivo al servicio OCR y consultar si la placa corresponde a un registro válido.
+
+### Capturas de pantalla
+
+#### 🎥 Monitoreo de Entrada con OCR
 ![Monitoreo de entrada](docs/4.png)
-*Flujo central de control de acceso: captura o carga de una imagen, vista previa del vehículo y resultado del reconocimiento de placa con confianza OCR y estado de registro.*
+*Proceso central del sistema: captura o carga de una imagen, vista previa del vehículo y resultado del reconocimiento de placa con nivel de confianza y estado del registro.*
 
-### 📋 Gestión de Vehículos y Propietarios
+#### 📋 Gestión de Vehículos y Propietarios
 ![Vehículos y Propietarios](docs/1.png)
-*Panel principal con tabla interactiva de vehículos registrados, información de propietarios, fotos y acciones (editar/eliminar)*
+*Panel principal con tabla interactiva, datos del propietario, fotografías, y acciones para editar o eliminar registros.*
 
-### 🅿️ Puestos de Parqueadero - Vista Cuadrícula
+#### 🅿️ Puestos de Parqueadero — Vista en Cuadrícula
 ![Puestos Cuadrícula](docs/2.png)
-*Visualización de puestos de estacionamiento organizados por columnas con estado de ocupación (verde = disponible, rojo = ocupado)*
+*Visualización organizada de los puestos de estacionamiento con indicadores visuales de disponibilidad ocupación.*
 
-### 📊 Puestos de Parqueadero - Vista Tabla
+#### 📊 Puestos de Parqueadero — Vista en Tabla
 ![Puestos Tabla](docs/2.5.png)
-*Vista alternativa en tabla con detalles de código, columna, sensor y distancia de cada puesto*
+*Vista alternativa con datos detallados por puesto, incluyendo código, columna, sensor y distancia.*
 
-### 📝 Historial de Cambios
+#### 📝 Historial de Cambios
 ![Historial](docs/3.png)
-*Registro de todas las acciones (creación, edición, eliminación) con detalles completos de cambios realizados*
+*Registro completo de acciones realizadas sobre los datos, incluyendo creación, edición y eliminación.*
 
 ---
 
-## 📋 Descripción
+## 📌 Descripción del Proyecto
 
-**UTEQ Smart Parking** es una aplicación administrativa moderna desarrollada con **React 19**, **CoreUI 5** y **Supabase** diseñada para gestionar de forma eficiente los vehículos autorizados y datos de sus propietarios en la Universidad Técnica Estatal de Quevedo.
+Este proyecto fue desarrollado con React 19, CoreUI 5 y Supabase para ofrecer una plataforma administrativa completa para la gestión vehicular en un entorno universitario.
 
-Esta solución implementa un **CRUD completo** con validaciones avanzadas, interfaz responsiva, manejo robusto de errores y notificaciones en tiempo real, proporcionando una experiencia de usuario profesional y segura.
+Incluye:
 
-### ✨ Características Principales
+- CRUD completo para vehículos, propietarios y puestos
+- Validaciones avanzadas en el frontend
+- Interfaz responsiva y moderna
+- Manejo de errores con mensajes claros
+- Notificaciones visuales para acciones exitosas o fallidas
+- Integración con OCR para detectar placas desde imágenes
+- Seguridad con Row Level Security (RLS) en Supabase
 
-- 🎥 **Monitoreo de entrada** mediante cámara del dispositivo o carga de imágenes
-- 🤖 **Reconocimiento OCR de placas** con confianza, estado y datos del vehículo
-- 📊 **Panel de administración intuitivo** con interfaz CoreUI
-- 🔄 **CRUD completo** (Crear, Leer, Actualizar, Eliminar)
-- 🔍 **Búsqueda avanzada** con filtros en tiempo real
-- 📱 **Diseño completamente responsivo**
-- ✅ **Validaciones robustas** de datos en cliente
-- 🔒 **Seguridad implementada** con RLS (Row Level Security)
-- ⚡ **Indicadores de carga** durante operaciones asincrónicas
-- 🎯 **Notificaciones visuales** (toast) de éxito/error
-- 📧 **Gestión segura** de datos sensibles (cédula enmascarada)
+### Características principales
+
+- 🎥 Monitoreo de entrada mediante cámara o carga de imagen
+- 🤖 Reconocimiento OCR de placas con identidad, confianza y estado
+- 📊 Panel administrativo fácil de usar
+- 🔄 CRUD completo con filtros y búsqueda
+- 📱 Diseño adaptable a distintos tamaños de pantalla
+- ✅ Validaciones robustas de entrada de datos
+- 🔒 Seguridad con políticas de acceso en base de datos
+- ⚡ Indicadores de carga durante operaciones asincrónicas
+- 🎯 Notificaciones tipo toast para feedback inmediato
+- 📧 Protección de datos sensibles con cédulas enmascaradas
 
 ---
 
-## 📑 Tabla de contenido
+## 📑 Índice
 
-- [Requisitos Previos](#requisitos-previos)
-- [Instalación Rápida](#instalación-rápida)
-- [Tecnologías](#tecnologías)
-- [Funcionalidades Detalladas](#funcionalidades-detalladas)
-- [Estructura del Proyecto](#estructura-del-proyecto)
-- [Configuración de Supabase](#configuración-de-supabase-y-rls)
-- [Variables de Entorno](#variables-de-entorno)
-- [Monitoreo de Entrada](#monitoreo-de-entrada)
+- [Requisitos](#requisitos)
+- [Instalación rápida](#instalación-rápida)
+- [Tecnologías utilizadas](#tecnologías-utilizadas)
+- [Funcionalidades clave](#funcionalidades-clave)
+- [Estructura del proyecto](#estructura-del-proyecto)
+- [Configuración de Supabase y RLS](#configuración-de-supabase-y-rls)
+- [Variables de entorno](#variables-de-entorno)
+- [Monitoreo de entrada](#monitoreo-de-entrada)
 - [Despliegue en Azure](#despliegue-en-azure)
-- [Validaciones del Formulario](#validaciones-del-formulario)
-- [Notas de Seguridad](#notas-de-seguridad)
-- [Guía de Desarrollo](#guía-de-desarrollo)
+- [Validaciones del formulario](#validaciones-del-formulario)
+- [Notas de seguridad](#notas-de-seguridad)
+- [Guía de desarrollo](#guía-de-desarrollo)
 - [Licencia](#licencia)
 - [Autor](#autor)
 
 ---
 
-## 📋 Requisitos Previos
+## ✅ Requisitos
 
-Antes de comenzar, asegúrate de tener instalado:
+Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
-- **Node.js 18+** y npm
-- **Git**
-- Cuenta activa en [Supabase](https://supabase.com/)
-- Editor de código (VS Code recomendado)
+- Node.js 18 o superior
+- npm
+- Git
+- Una cuenta activa en Supabase
+- Un editor de código, preferiblemente VS Code
 
 ---
 
-## 🚀 Instalación Rápida
+## 🚀 Instalación rápida
 
 ```bash
 # 1. Clonar el repositorio
@@ -102,7 +116,7 @@ cd Parqueadero
 # 2. Instalar dependencias
 npm install
 
-# 3. Crear archivo de configuración
+# 3. Crear archivo local de configuración
 cp .env.local.example .env.local
 # Edita .env.local con tus credenciales de Supabase
 
@@ -110,79 +124,81 @@ cp .env.local.example .env.local
 npm run dev
 ```
 
-Abre [http://localhost:5173/parqueadero/vehiculo-propietario](http://localhost:5173/parqueadero/vehiculo-propietario) en tu navegador.
+Luego, abre esta ruta en tu navegador:
+
+[http://localhost:5173/parqueadero/vehiculo-propietario](http://localhost:5173/parqueadero/vehiculo-propietario)
 
 ---
 
-## 🛠️ Tecnologías
+## 🛠️ Tecnologías utilizadas
 
-| Tecnología | Descripción | Versión |
+| Tecnología | Uso principal | Versión |
 |:---|:---|:---:|
-| **React** | Biblioteca UI declarativa | 19+ |
-| **Vite** | Bundler y servidor de desarrollo ultrarápido | Latest |
-| **CoreUI React** | Sistema de componentes administrativos | 5.x |
-| **Supabase** | Backend con PostgreSQL y API REST | Cloud |
-| **React Router** | Enrutamiento y navegación | 7.x |
-| **SCSS** | Preprocesador CSS moderno | Standard |
-| **Axios** (vía Supabase JS) | Cliente HTTP para API REST | - |
-| **Azure** | Despliegue de la aplicación y servicio OCR | Cloud |
+| **React** | Interfaz de usuario | 19+ |
+| **Vite** | Bundler y servidor de desarrollo | Latest |
+| **CoreUI React** | Componentes administrativos | 5.x |
+| **Supabase** | Base de datos y backend asistido | Cloud |
+| **React Router** | Navegación de rutas | 7.x |
+| **SCSS** | Estilos y diseño visual | Standard |
+| **Axios** (vía Supabase JS) | Comunicación HTTP con APIs | - |
+| **Azure** | Despliegue y servicio OCR | Cloud |
 
 ---
 
-## 🎯 Funcionalidades Detalladas
+## 🎯 Funcionalidades clave
 
-### 📋 Gestión Completa (CRUD)
+### 📋 Gestión completa (CRUD)
 
-| Operación | Descripción | Características |
+| Operación | Descripción | Detalles |
 |:---|:---|:---|
-| **📖 Listar** | Tabla con todos los vehículos y propietarios registrados | Foto de vehículo, foto de propietario, placa, marca, modelo, año, color, cédula enmascarada, correo, estado |
-| **🔎 Buscar** | Filtro en tiempo real por múltiples campos | Placa, marca, modelo, color, propietario, correo institucional |
-| **📄 Paginar** | Navegación entre registros | 10 registros por página, botones Anterior/Siguiente |
-| **➕ Crear** | Registrar nuevo vehículo con validaciones | Modal interactivo con formulario validado |
-| **✏️ Editar** | Modificar datos existentes | Carga automática de datos, actualización en tiempo real |
-| **🗑️ Eliminar** | Borrar registro con confirmación | Modal de confirmación, eliminación segura |
-| **💬 Notificaciones** | Retroalimentación visual | Toast de éxito/error, alertas inline, indicadores de carga |
+| **📖 Listar** | Muestra todos los vehículos y propietarios registrados | Incluye foto, placa, marca, modelo, año, color, cédula enmascarada, correo y estado |
+| **🔎 Buscar** | Filtra registros en tiempo real | Busca por placa, marca, modelo, color, propietario y correo institucional |
+| **📄 Paginación** | Navega entre resultados | 10 registros por página con botones de avance y retroceso |
+| **➕ Crear** | Registra nuevos vehículos | Formulario validado en modal |
+| **✏️ Editar** | Actualiza información existente | Carga los datos automáticamente y guarda cambios en vivo |
+| **🗑️ Eliminar** | Quita registros de forma segura | Requiere confirmación antes de borrar |
+| **💬 Notificaciones** | Informa el resultado de cada acción | Toasts, alertas y estados de carga |
 
 ### 🔒 Seguridad
 
-- ✅ **RLS (Row Level Security)** habilitado en Supabase
-- 🔐 **Cédula enmascarada** en listados (nunca se muestra completa)
-- 🔑 **Claves públicas** únicamente (nunca `service_role`)
-- ✔️ **Validaciones en cliente** para mejor UX
-- 🛡️ **Validaciones en servidor** para integridad de datos
+- ✅ Habilitación de RLS en Supabase
+- 🔐 Cédula enmascarada en listados
+- 🔑 Uso exclusivo de claves públicas (`anon`) en el cliente
+- ✔️ Validaciones del lado del cliente para mejor experiencia
+- 🛡️ Validaciones adicionales en la capa de datos para mantener integridad
 
 ---
 
-## 📁 Estructura del Proyecto
+## 📁 Estructura del proyecto
 
-```
+```text
 Parqueadero/
 ├── 📄 README.md                    # Este archivo
 ├── 📄 DEVELOPMENT.md               # Guía de desarrollo
-├── 📄 ARCHITECTURE.md              # Arquitectura del proyecto
-├── 📦 package.json                 # Dependencias y scripts
+├── 📄 ARCHITECTURE.md              # Arquitectura y decisiones técnicas
+├── 📦 package.json                 # Scripts y dependencias
 ├── 🔧 vite.config.mjs              # Configuración de Vite
-├── 🔧 eslint.config.mjs            # Configuración de ESLint
+├── 🔧 eslint.config.mjs            # Reglas de linting
 ├── 🔐 .env.local.example           # Plantilla de variables de entorno
 │
 ├── 📂 public/                      # Archivos públicos
 │   └── manifest.json               # Manifest PWA
 │
-├── 📂 docs/                        # Documentación y assets
+├── 📂 docs/                        # Documentación y recursos visuales
 │   ├── 1.png                       # Vehículos y propietarios
 │   ├── 2.png                       # Puestos en cuadrícula
 │   ├── 2.5.png                     # Puestos en tabla
 │   ├── 3.png                       # Historial de cambios
 │   ├── 4.png                       # Monitoreo de entrada con OCR
-│   └── README.md                   # Docs adicionales
+│   └── README.md                   # Documentación adicional
 │
-├── 📂 sql/                         # Scripts de base de datos
-│   └── supabase_vehiculos_crud.sql # CRUD schema inicial
+├── 📂 sql/                         # Scripts SQL
+│   └── supabase_vehiculos_crud.sql # CRUD inicial para Supabase
 │
 └── 📂 src/                         # Código fuente principal
     ├── 📄 index.jsx                # Punto de entrada
     ├── 📄 App.jsx                  # Componente raíz
-    ├── 📄 routes.js                # Definición de rutas
+    ├── 📄 routes.js                # Rutas de la aplicación
     ├── 📄 store.js                 # Estado global
     ├── 📄 _nav.jsx                 # Configuración de navegación
     │
@@ -195,37 +211,37 @@ Parqueadero/
     │   └── header/
     │       └── AppHeaderDropdown.jsx
     │
-    ├── 📂 hooks/                   # Custom React hooks
-    │   └── useVehiculos.js         # Hook para gestión de vehículos
+    ├── 📂 hooks/                   # Hooks personalizados
+    │   └── useVehiculos.js         # Lógica para vehiculos
     │
-    ├── 📂 lib/                     # Librerías y utilidades
+    ├── 📂 lib/                     # Utilidades y bibliotecas
     │   └── supabase.js             # Cliente de Supabase
     │
-    ├── 📂 utils/                   # Funciones utilitarias
-    │   └── validarVehiculo.js      # Validaciones de formulario
+    ├── 📂 utils/                   # Funciones auxiliares
+    │   └── validarVehiculo.js      # Validaciones de formularios
     │
     ├── 📂 assets/                  # Recursos estáticos
-    │   ├── brand/                  # Logos y branding
-    │   ├── icons/                  # Iconografía
-    │   └── images/                 # Imágenes
+    │   ├── brand/
+    │   ├── icons/
+    │   └── images/
     │
     ├── 📂 scss/                    # Estilos SCSS
-    │   ├── style.scss              # Estilos principales
-    │   ├── examples.scss           # Estilos de ejemplos
-    │   └── vendors/                # Estilos de terceros
+    │   ├── style.scss
+    │   ├── examples.scss
+    │   └── vendors/
     │
-    ├── 📂 layout/                  # Layouts principales
-    │   └── DefaultLayout.jsx       # Layout por defecto
+    ├── 📂 layout/                  # Layouts de la aplicación
+    │   └── DefaultLayout.jsx
     │
     └── 📂 views/                   # Vistas y páginas
-        ├── parqueadero/            # ⭐ Módulo de vehículos
-        │   ├── ListaVehiculos.jsx  # Tabla principal
-        │   ├── VehiculoFormModal.jsx # Modal de crear/editar
-        │   └── ConfirmarEliminarModal.jsx # Modal de confirmación
-        ├── dashboard/              # Panel de control
-        ├── authentication/         # Autenticación
-        ├── forms/                  # Ejemplos de formularios
-        ├── components/             # Demostración de componentes
+        ├── parqueadero/
+        │   ├── ListaVehiculos.jsx
+        │   ├── VehiculoFormModal.jsx
+        │   └── ConfirmarEliminarModal.jsx
+        ├── dashboard/
+        ├── authentication/
+        ├── forms/
+        ├── components/
         └── ...otros módulos
 ```
 
@@ -233,48 +249,48 @@ Parqueadero/
 
 ## ⚙️ Configuración de Supabase y RLS
 
-### 📋 Pasos de Configuración
+### 1. Crear el proyecto en Supabase
 
-#### 1️⃣ Crear Proyecto en Supabase
-
-1. Accede a [supabase.com](https://supabase.com/)
+1. Ingresa a [supabase.com](https://supabase.com/)
 2. Inicia sesión o crea una cuenta
 3. Crea un nuevo proyecto
-4. Anota tu URL y claves públicas
+4. Guarda la URL del proyecto y las claves públicas
 
-#### 2️⃣ Ejecutar Scripts de Base de Datos
+### 2. Ejecutar los scripts SQL
 
-1. Primero, ejecuta **`supabase_parqueadero_uteq.sql`** (script de la práctica base)
-   - Crea tablas: `vehiculos`, `puestos`, `registros_estacionamiento`
+1. Primero ejecuta el script base de la práctica
+   - `supabase_parqueadero_uteq.sql`
+   - Crea tablas como `vehiculos`, `puestos` y `registros_estacionamiento`
 
-2. Luego, ejecuta **`sql/supabase_vehiculos_crud.sql`** incluido en este repositorio:
-   - ✅ Agrega columna `cedula` a tabla `vehiculos`
-   - ✅ Crea `cedula_enmascarada` como columna generada
-   - ✅ Habilita **RLS** en tabla `vehiculos`
-   - ✅ Configura políticas `SELECT`, `INSERT`, `UPDATE`, `DELETE`
+2. Después, ejecuta el archivo incluido en este repositorio:
+   - `sql/supabase_vehiculos_crud.sql`
+   - Agrega la columna `cedula`
+   - Crea `cedula_enmascarada` como columna generada
+   - Habilita RLS en la tabla `vehiculos`
+   - Configura políticas para `SELECT`, `INSERT`, `UPDATE` y `DELETE`
 
-#### 3️⃣ Pasos para Ejecutar Scripts
+### 3. Cómo ejecutar SQL en Supabase
 
 ```sql
 -- En SQL Editor de Supabase → New Query
--- Copiar y ejecutar contenido de: sql/supabase_vehiculos_crud.sql
+-- Copia y ejecuta el contenido de: sql/supabase_vehiculos_crud.sql
 ```
 
-### 🔐 Seguridad y Políticas RLS
+### 🔐 Seguridad y políticas RLS
 
-> ⚠️ **Nota de Seguridad**: Las políticas actuales están configuradas para el rol `anon` con fines académicos únicamente.
-> 
-> **En producción**, debes:
-> - Implementar **Supabase Auth** para autenticación de usuarios
-> - Restringir acceso por usuario o rol específico
-> - Usar claves con permisos limitados
-> - Validar todos los datos en el servidor
+> ⚠️ Las políticas actuales están configuradas para el rol `anon` con fines educativos.
+>
+> En un entorno productivo, se recomienda:
+> - Implementar Supabase Auth para autenticación
+> - Limitar acceso por usuario o rol
+> - Utilizar permisos mínimos
+> - Validar datos tanto desde la aplicación como desde la base de datos
 
 ---
 
-## 🔑 Variables de Entorno
+## 🔑 Variables de entorno
 
-Crea un archivo `.env.local` en la raíz del proyecto (copia desde `.env.local.example`):
+Crea un archivo `.env.local` en la raíz del proyecto tomando como referencia `.env.local.example`:
 
 ```dotenv
 # Supabase Configuration
@@ -287,114 +303,114 @@ VITE_APP_NAME=UTEQ Smart Parking
 VITE_APP_VERSION=1.0.0
 ```
 
-### 📌 Variables Requeridas
+### Variables requeridas
 
 | Variable | Descripción | Obligatoria |
 |:---|:---|:---:|
-| `VITE_SUPABASE_URL` | URL de tu proyecto Supabase | ✅ |
-| `VITE_SUPABASE_PUBLISHABLE_KEY` | Clave pública (`anon`) de Supabase | ✅ |
-| `VITE_OCR_ENDPOINT` | URL del endpoint OCR para detectar placas | ✅ para monitoreo |
+| `VITE_SUPABASE_URL` | URL del proyecto Supabase | ✅ |
+| `VITE_SUPABASE_PUBLISHABLE_KEY` | Clave pública `anon` | ✅ |
+| `VITE_OCR_ENDPOINT` | Endpoint OCR para detectar placas | ✅ para monitoreo |
 
-### ⚠️ Consideraciones Importantes
+### Consideraciones importantes
 
-- **Nunca** uses la clave `service_role` en el cliente
-- El archivo `.env.local` está en `.gitignore` y no se sube al repositorio
-- Copia las credenciales desde el panel de Supabase → Settings → API
+- Nunca uses la clave `service_role` en el cliente
+- El archivo `.env.local` debe mantenerse fuera del control de versiones
+- Las credenciales se obtienen en Supabase → Settings → API
 
 ---
 
-## ✔️ Validaciones del Formulario
+## ✔️ Validaciones del formulario
 
-El sistema implementa validaciones robustas tanto en cliente como en servidor:
+La aplicación incorpora validaciones tanto en frontend como en la capa de almacenamiento.
 
-### 📋 Campos del Formulario
+### Campos validados
 
-| Campo | Validaciones | Ejemplo |
+| Campo | Validación | Ejemplo |
 |:---|:---|:---|
-| **Placa** | Obligatoria, formato ecuatoriano | `ABC-1234` |
-| **Marca** | Obligatoria, texto | `Toyota` |
-| **Modelo** | Obligatoria, texto | `Corolla` |
-| **Año** | Numérico, 1980 - (año actual + 1) | `2024` |
-| **Color** | Obligatorio, texto | `Blanco` |
-| **Tipo de Vehículo** | Obligatorio, selección | `Auto`, `Camión`, etc. |
-| **Propietario** | Obligatorio, nombre completo | `Juan Pérez` |
+| **Placa** | Obligatoria y con formato ecuatoriano | `ABC-1234` |
+| **Marca** | Obligatoria | `Toyota` |
+| **Modelo** | Obligatoria | `Corolla` |
+| **Año** | Numérico, con rango válido | `2024` |
+| **Color** | Obligatorio | `Blanco` |
+| **Tipo de Vehículo** | Selección obligatoria | `Auto`, `Camión`, etc. |
+| **Propietario** | Nombre completo requerido | `Juan Pérez` |
 | **Cédula** | 10 dígitos con verificador válido | `1234567890` |
 | **Correo Institucional** | Email válido | `usuario@uteq.edu.ec` |
 | **Foto Vehículo** | URL válida (opcional) | `https://...` |
 | **Foto Propietario** | URL válida (opcional) | `https://...` |
 
-### 🎯 Comportamiento de Validaciones
+### Comportamiento
 
-- ✅ **En Crear**: Todos los campos requeridos deben completarse
-- ✅ **En Editar**: Cédula opcional (se conserva actual si está vacía)
-- ✅ **Mensajes de Error**: Se muestran junto a cada campo
-- ✅ **Alertas de Red**: Se muestran en modal si falla la conexión
-- ✅ **Feedback Visual**: Campos con error resaltados en rojo
+- ✅ En creación, todos los campos requeridos deben estar completos
+- ✅ En edición, la cédula puede mantenerse sin cambios si se deja vacía
+- ✅ Los errores se muestran junto a cada campo
+- ✅ Si hay problemas de red, se muestran alertas dentro del modal
+- ✅ Los campos con errores se resaltan visualmente
 
 ---
 
-## 🛡️ Notas de Seguridad
+## 🛡️ Notas de seguridad
 
-### 🔐 Protección de Datos Sensibles
+### Protección de datos sensibles
 
-- 📄 **Cédula Enmascarada**: La cédula completa nunca se solicita en listados
-  - Se usa columna `cedula_enmascarada` (ejemplo: `123456****`)
-  - El cliente nunca recibe el valor completo
-  
-- ✏️ **Edición de Cédula**: 
-  - Campo mostrado vacío por diseño de seguridad
+- 📄 La cédula completa nunca se expone en listados
+  - Se usa la columna `cedula_enmascarada`
+  - El cliente solo recibe un valor oculto o parcialmente enmascarado
+
+- ✏️ Edición de cédula
+  - El campo aparece vacío por diseño de seguridad
   - Solo se envía a Supabase si el usuario escribe un valor nuevo
-  - Permite cambiar cédula sin exponer la actual
+  - Así se puede actualizar la información sin revelar el dato actual
 
-- 🔑 **Claves Supabase**:
-  - Siempre usar `publishable_key` (anon) en el cliente
-  - **Nunca** incluir `service_role_key` en el frontend
-  - Credenciales en `.env.local`, nunca en el código
+- 🔑 Claves Supabase
+  - Siempre usa `publishable_key` en el frontend
+  - Nunca incluyas `service_role_key` en el cliente
+  - Guarda las credenciales en `.env.local`
 
-### ✅ Validaciones Multi-Nivel
+### Validaciones en múltiples niveles
 
-- ✔️ **Cliente**: Validaciones en tiempo real para mejor UX
-- ✔️ **Servidor**: Validaciones en Supabase para integridad de datos
-- ✔️ **RLS**: Políticas de Row Level Security en base de datos
+- ✔️ Validación en el cliente para mejorar la experiencia
+- ✔️ Validación en la base de datos para mantener integridad
+- ✔️ Políticas de acceso con RLS
 
-### 🎥 Monitoreo de Entrada
+### Monitoreo de entrada
 
-La ruta `/parqueadero/monitoreo-entrada` concentra el control de acceso vehicular:
+La ruta `/parqueadero/monitoreo-entrada` concentra el flujo de control de acceso vehicular:
 
 1. Activa la cámara del dispositivo o selecciona una imagen JPG/PNG.
-2. Revisa la vista previa y solicita la detección de placa.
-3. La aplicación envía la imagen a `VITE_OCR_ENDPOINT`.
-4. El resultado muestra la placa detectada, la confianza OCR, el estado y la información del vehículo registrado.
+2. Revisa la vista previa y solicita la detección de la placa.
+3. La aplicación envía la imagen al endpoint configurado en `VITE_OCR_ENDPOINT`.
+4. El resultado muestra la placa detectada, el nivel de confianza OCR, el estado y la información del vehículo registrado.
 
-El endpoint OCR se configura por ambiente. El frontend no contiene credenciales del servicio; solo utiliza la URL pública configurada en `.env.local` o en la configuración de Azure.
+El endpoint OCR se configura por entorno. El frontend no guarda credenciales del servicio, sino solo la URL pública definida en `.env.local` o en la configuración de Azure.
 
-### 📊 Auditoría y Cumplimiento
+### Auditoría y cumplimiento
 
-- 📝 Usar `created_at` y `updated_at` para auditoría
-- 🔍 Implementar logs de cambios para cumplimiento
-- 🔐 Cifrar datos sensibles adicionales si es necesario
+- 📝 Usa `created_at` y `updated_at` para registrar cambios
+- 🔍 Implementa registros de auditoría para trazabilidad
+- 🔐 Cifra datos sensibles adicionales si se requiere
 
 ---
 
-## 📖 Guía de Desarrollo
+## 📖 Guía de desarrollo
 
-### 🚀 Scripts Disponibles
+### Scripts disponibles
 
 ```bash
 # Modo desarrollo
-npm run dev              # Inicia servidor de desarrollo (puerto 5173)
+npm run dev              # Inicia el servidor de desarrollo (puerto 5173)
 
-# Compilación
-npm run build            # Construye para producción
-npm run serve            # Previsualiza el build de producción
+# Producción
+npm run build            # Genera la versión lista para despliegue
+npm run serve            # Previsualiza el build compilado
 
 # Linting
 npm run lint             # Ejecuta ESLint
 ```
 
-### 📚 Estructura de Componentes
+### Patrón de componentes
 
-Cada componente de vistas sigue este patrón:
+Cada vista sigue una estructura similar a esta:
 
 ```jsx
 // views/parqueadero/ListaVehiculos.jsx
@@ -403,7 +419,7 @@ import { useVehiculos } from '../../hooks/useVehiculos'
 
 export default function ListaVehiculos() {
   const { vehiculos, loading, error, crear, actualizar, eliminar } = useVehiculos()
-  
+
   // Lógica del componente
   return (
     // JSX del componente
@@ -411,28 +427,28 @@ export default function ListaVehiculos() {
 }
 ```
 
-### 🔄 Flujo de Datos
+### Flujo de datos
 
-```
+```text
 Supabase (PostgreSQL)
     ↓
-supabase.js (Cliente)
+supabase.js (cliente)
     ↓
-useVehiculos.js (Hook)
+useVehiculos.js (hook)
     ↓
-Componentes (React)
+Componentes React
 ```
 
-### 🐛 Debugging
+### Depuración
 
-1. **React DevTools**: Inspecciona el árbol de componentes
-2. **Console del navegador**: Verifica errores de JavaScript
-3. **Network tab**: Monitorea llamadas a Supabase
-4. **Supabase Dashboard**: Verifica datos en la BD directamente
+1. Usa React DevTools para inspeccionar el árbol de componentes
+2. Revisa la consola del navegador para errores JavaScript
+3. Monitorea las llamadas a Supabase en la pestaña Network
+4. Verifica directamente los datos en el dashboard de Supabase
 
 ---
 
-## 📦 Dependencias Principales
+## 📦 Dependencias principales
 
 ```json
 {
@@ -452,42 +468,44 @@ Componentes (React)
 
 ---
 
-## 📄 Documentación Adicional
+## 📄 Documentación adicional
 
-- 📘 [DEVELOPMENT.md](DEVELOPMENT.md) - Guía completa de desarrollo
-- 🏗️ [ARCHITECTURE.md](ARCHITECTURE.md) - Detalles de arquitectura
+- 📘 [DEVELOPMENT.md](DEVELOPMENT.md) - Guía exhaustiva de desarrollo
+- 🏗️ [ARCHITECTURE.md](ARCHITECTURE.md) - Detalles técnicos de la arquitectura
 - 📚 [React Documentation](https://react.dev/)
 - 📚 [CoreUI Documentation](https://coreui.io/react/docs/)
 - 📚 [Supabase Documentation](https://supabase.com/docs)
 
+---
+
 ## ☁️ Despliegue en Azure
 
-La aplicación se despliega como frontend estático en Azure y consume Supabase junto con el endpoint OCR configurado para el monitoreo de entrada.
+La aplicación puede desplegarse como un frontend estático en Azure y consumir Supabase junto con el endpoint OCR configurado para el monitoreo de entrada.
 
-### Configuración de Azure
+### Configuración recomendada en Azure
 
-1. Crea un recurso de **Azure Static Web Apps** o **Azure App Service** conectado al repositorio.
+1. Crea un recurso de **Azure Static Web Apps** o **Azure App Service** asociado al repositorio.
 2. Configura el comando de compilación como `npm run build`.
-3. Configura la carpeta de salida como `dist`.
-4. Registra estas variables en la configuración del recurso, sin subir `.env.local`:
-  - `VITE_SUPABASE_URL`
-  - `VITE_SUPABASE_PUBLISHABLE_KEY`
-  - `VITE_OCR_ENDPOINT`
-5. Ejecuta una prueba en `/parqueadero/monitoreo-entrada` para verificar cámara, carga de imagen y reconocimiento OCR.
+3. Define la carpeta de salida como `dist`.
+4. Registra estas variables en la configuración del recurso:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_PUBLISHABLE_KEY`
+   - `VITE_OCR_ENDPOINT`
+5. Prueba la funcionalidad en `/parqueadero/monitoreo-entrada` para verificar cámara, carga de imagen y OCR.
 
-> Las variables `VITE_*` se incorporan durante la compilación de Vite. Después de cambiar una variable en Azure, vuelve a desplegar la aplicación.
+> Las variables `VITE_*` se incorporan en tiempo de compilación por Vite. Si cambias una variable en Azure, vuelve a desplegar la aplicación.
 
 ---
 
-## 📋 Checklist de Despliegue
+## 📋 Checklist de despliegue
 
 - [ ] Todas las validaciones funcionan correctamente
 - [ ] Variables de entorno configuradas en el servidor
 - [ ] CORS habilitado en Supabase
-- [ ] RLS policies verificadas y probadas
-- [ ] Datos sensibles no se exponen en logs
+- [ ] Políticas RLS verificadas y probadas
+- [ ] Datos sensibles no visibles en registros o logs
 - [ ] SSL/TLS habilitado
-- [ ] Backups de BD configurados
+- [ ] Copias de seguridad de la base de datos configuradas
 - [ ] Monitoreo y alertas de Azure activos
 - [ ] Prueba OCR completada en `/parqueadero/monitoreo-entrada`
 
@@ -495,40 +513,25 @@ La aplicación se despliega como frontend estático en Azure y consume Supabase 
 
 ## 📄 Licencia
 
-Este proyecto está bajo la licencia **MIT**. Ver archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está bajo la licencia **MIT**. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 
 ---
 
 ## 👥 Autor
 
-**Proyecto de Práctica Académica**
+**Proyecto de práctica académica**
 
-Desarrollado como práctica de la asignatura:
+Desarrollado como parte de la asignatura:
 - **Aplicaciones Telemáticas Basadas en la Web**
 - Carrera: Ingeniería en Telemática
 - Universidad: UTEQ (Universidad Técnica Estatal de Quevedo)
 
 ### 🤝 Contribuciones
 
-Las contribuciones son bienvenidas. Para cambios importantes:
+Las contribuciones son bienvenidas. Si deseas mejorar el proyecto:
 
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
+1. Haz un fork del repositorio
+2. Crea una rama para tu funcionalidad (`git checkout -b feature/AmazingFeature`)
+3. Realiza tu commit (`git commit -m 'Add some AmazingFeature'`)
+4. Suba los cambios a tu rama (`git push origin feature/AmazingFeature`)
 5. Abre un Pull Request
-
----
-
-## 📞 Soporte
-
-Para problemas o dudas:
-1. Revisa la documentación en [DEVELOPMENT.md](DEVELOPMENT.md)
-2. Consulta la [ARCHITECTURE.md](ARCHITECTURE.md)
-3. Abre un issue en el repositorio
-4. Contacta al profesor/instructor
-
----
-
-**Última actualización**: 2024
-**Estado**: ✅ Activo y en desarrollo
